@@ -20,7 +20,8 @@ describe 'Ruby intro part 1' do
 
     it 'works on the empty array [2 points]', points: 2 do
 
-      #
+      # checks to make sure that when the function is called with an empty array,
+      # the function won't fail, and that the return value of the function should be 0
 
       expect { sum([]) }.not_to raise_error
       expect(sum([])).to be_zero
