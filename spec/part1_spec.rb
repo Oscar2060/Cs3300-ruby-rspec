@@ -6,6 +6,12 @@ describe 'Ruby intro part 1' do
   describe '#sum' do
 
     it 'returns correct sum [1 point]', points: 1 do
+
+      # expect pretty much specifies what the return value of the method sum should be with 
+      # the specific input values that come along with each expect call
+      # for example, the second expect call says that the sum of 1, 2, 3, 4, and 5 should 
+      # be equal to 15, and the test would fail on that expect call if it doesn't equal 15
+
       expect(sum([1, 2, 3, 4, 5])).to be_a_kind_of Integer
       expect(sum([1, 2, 3, 4, 5])).to eq(15)
       expect(sum([1, 2, 3, 4, -5])).to eq(5)
@@ -13,6 +19,9 @@ describe 'Ruby intro part 1' do
     end
 
     it 'works on the empty array [2 points]', points: 2 do
+
+      #
+
       expect { sum([]) }.not_to raise_error
       expect(sum([])).to be_zero
     end
